@@ -20,3 +20,5 @@ try:
     print(f'Image path passed: {sys.argv[1]}')
 except IndexError:
     print('ERROR: No Argument for image path')
+
+print(test)
