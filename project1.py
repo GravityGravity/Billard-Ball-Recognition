@@ -21,11 +21,12 @@ try:
 except IndexError:
     sys.exit('ERROR: No Argument for image path')
 
-# Original unmodified image
 orgimg = cv.imread(sys.argv[1])
+""" Unmodified Image    """
 
 if orgimg is None:
     sys.exit('ERROR: Could not read image')
 
+cv.imshow('unmodified image', orgimg)
 
 cv.waitKey(0)
