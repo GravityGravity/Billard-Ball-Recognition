@@ -11,6 +11,12 @@
 #   RED - White spotball with red dots
 #   Green - other balls
 
+# PHASE 1:
+#   50% Ball Detection rate
+#   50% FAR (Incorrect detections rate)
+#   50% CR (Ball classification rate)
+
+
 import sys  # For command line arguments
 import numpy as np
 import cv2 as cv
@@ -25,7 +31,7 @@ def main():
         sys.exit('ERROR: No Argument for image path')
 
     # Read Image (0 = grayscale, 1 = BGR 'Default')
-    orgimg = cv.imread(sys.argv[1], 0)
+    orgimg = cv.imread(sys.argv[1], cv.IMREAD_GRAYSCALE)
     """ Unmodified Image """
 
     if orgimg is None:  # Debug: Check image was read
@@ -33,7 +39,7 @@ def main():
 
     # Display unmodified image
     cv.imshow('unmodified image', orgimg)
-    cv.imshow('RGB Image', orgimgRGB)
+    #cv.imshow('RGB Image', orgimgRGB)
 
     print(orgimg)
     cv.waitKey(0)
