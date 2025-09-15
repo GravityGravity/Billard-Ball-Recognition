@@ -19,6 +19,13 @@ import cv2 as cv
 try:
     print(f'Image path passed: {sys.argv[1]}')
 except IndexError:
-    print('ERROR: No Argument for image path')
+    sys.exit('ERROR: No Argument for image path')
 
-print(test)
+# Original unmodified image
+orgimg = cv.imread(sys.argv[1])
+
+if orgimg is None:
+    sys.exit('ERROR: Could not read image')
+
+
+cv.waitKey(0)
