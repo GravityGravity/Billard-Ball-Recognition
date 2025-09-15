@@ -15,18 +15,24 @@ import sys  # For command line arguments
 import numpy as np
 import cv2 as cv
 
-# Debug
-try:
-    print(f'Image path passed: {sys.argv[1]}')
-except IndexError:
-    sys.exit('ERROR: No Argument for image path')
 
-orgimg = cv.imread(sys.argv[1])
-""" Unmodified Image    """
+def main():
 
-if orgimg is None:
-    sys.exit('ERROR: Could not read image')
+    try:    # Debug: Check image path was passed
+        print(f'Image path passed: {sys.argv[1]}')
+    except IndexError:
+        sys.exit('ERROR: No Argument for image path')
 
-cv.imshow('unmodified image', orgimg)
+    # Read Image
+    orgimg = cv.imread(sys.argv[1])
+    """ Unmodified Image """
 
-cv.waitKey(0)
+    if orgimg is None:  # Debug: Check image was read
+        sys.exit('ERROR: Could not read image')
+
+    # Display unmodified image
+    cv.imshow('unmodified image', orgimg)
+    cv.waitKey(0)
+
+
+main()
