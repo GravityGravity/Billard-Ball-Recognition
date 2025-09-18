@@ -31,7 +31,7 @@ def main():
         sys.exit('ERROR: No Argument for image path')
 
     # Read Image (0 = grayscale, 1 = BGR 'Default')
-    orgimg = cv.imread(sys.argv[1], cv.IMREAD_GRAYSCALE)
+    orgimg = cv.imread(sys.argv[1], cv.IMREAD_COLOR_BGR)
     """ Unmodified Image """
 
     if orgimg is None:  # Debug: Check image was read
@@ -42,9 +42,14 @@ def main():
 
     gaussblurimg = orgimg.copy()
 
-    gaussblurimg = cv.GaussianBlur(gaussblurimg, (11, 11), 4)
+    gaussblurimg = cv.GaussianBlur(orgimg, (3, 3), 0.5)
 
+    edges = cv.Canny(gaussblurimg, 0, 100)
+
+    # Display unmodified image
+    cv.imshow('unmodified image', orgimg)
     cv.imshow('gauss filter image', gaussblurimg)
+    cv.imshow('Canny edge detector', edges)
 
     cv.waitKey(0)
 
