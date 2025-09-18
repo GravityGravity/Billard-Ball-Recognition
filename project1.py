@@ -40,43 +40,13 @@ def main():
     # Display unmodified image
     cv.imshow('unmodified image', orgimg)
 
-    blurimg = orgimg.copy()
-    kernel = np.ones((5,5), np.int64) / 25
-    print(kernel)
-    blurimg = cv.filter2D(blurimg, -1, kernel)
+    gaussblurimg = orgimg.copy()
 
-    cv.imshow('filter image', blurimg)
+    gaussblurimg = cv.GaussianBlur(gaussblurimg, (11, 11), 4)
 
+    cv.imshow('gauss filter image', gaussblurimg)
 
     cv.waitKey(0)
-
-
-def histogram(Mat):
-    """
-    Prints historgram
-    """
-
-    hist_r = cv2.calcHist('img')
-    hist_b = cv2.calcHist()
-    hist_g = cv2.calcHist()
-
-    plt.plot(hist_r, color='r')
-    plt.plot(hist_b, color='b')
-    plt.plot(hist_g, color='g')
-
-    return
-
-
-def plotMat(Mat):
-    """
-    Prints color plot
-    """
-
-    newMatrix = Matrix
-
-    return newMatrix
-
-# To represent colors in a
 
 
 main()
