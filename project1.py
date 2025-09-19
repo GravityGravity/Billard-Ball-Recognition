@@ -40,13 +40,13 @@ def main():
     gaussblurimg = cv.GaussianBlur(orgimg, (3, 3), 2)
 
     bilaterBlurImg = cv.bilateralFilter(orgimg, 30, 150, 150)
-    edges = cv.Canny(bilaterBlurImg, 35, 80)
+    edges = cv.Canny(bilaterBlurImg, 20, 60)
 
     edges = cv.dilate(edges, (3, 3), iterations=5)
-    edges = cv.erode(edges, (3, 3), iterations=3)
+    edges = cv.erode(edges, (3, 3), iterations=1)
 
     Hcircle = cv.HoughCircles(
-        edges, cv.HOUGH_GRADIENT_ALT, dp=1, minDist=10, param1=10, param2=0.2, minRadius=10, maxRadius=35)
+        edges, cv.HOUGH_GRADIENT, dp=2, minDist=25, param1=60, param2=60, minRadius=10, maxRadius=40)
 
     if Hcircle is not None:
         circleDet = cv.cvtColor(edges, cv.COLOR_GRAY2BGR)
