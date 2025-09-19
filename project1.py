@@ -46,22 +46,23 @@ def main():
     edges = cv.erode(edges, (3, 3), iterations=1)
 
     Hcircle = cv.HoughCircles(
-        edges, cv.HOUGH_GRADIENT, dp=2, minDist=25, param1=60, param2=60, minRadius=10, maxRadius=40)
+        edges, cv.HOUGH_GRADIENT, dp=2, minDist=25, param1=60, param2=55, minRadius=10, maxRadius=40)
 
     if Hcircle is not None:
         circleDet = cv.cvtColor(edges, cv.COLOR_GRAY2BGR)
 
-        for i in Hcircle[0, :]:
-            cv.circle(circleDet, (int(i[0]), int(i[1])),
-                      int(i[2]), (255, 0, 0), 3)
+        print(len(Hcircle.squeeze()))
 
-    # Display unmodified image
+        for (x, y, r) in Hcircle[0, :]:
+            print(f'{int(x)} {int(y)} {int(r)}\n')
+            cv.circle(circleDet, (int(x), int(y)), int(r), (0, 255, 0), 2)
+
+    # # # Display unmodified image
     cv.imshow('unmodified image', orgimg)
     cv.imshow('gauss filter image', gaussblurimg)
     cv.imshow('bilateral filter image', bilaterBlurImg)
     # cv.imshow('Canny edge detector', edges)
     cv.imshow('Hough Circle', circleDet)
-    print(Hcircle)
     cv.waitKey(0)
 
 
