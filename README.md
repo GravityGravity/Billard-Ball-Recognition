@@ -9,6 +9,6 @@ From there, Cannys Edge Detection method is ran with open operations to assist i
 
 ![edges + circles](https://github.com/GravityGravity/Billard-Ball-Recognition/blob/main/ImageExamples/EdgeExample.png)
 
-##### Identifiers
+#### Identifiers
   Blue -> Solid and Striped balls
   Red -> Spot Ball
