@@ -10,6 +10,9 @@
 #   Table color is mostly the same
 #   Good bright white lighting of table
 
+# Terminal Input Examples:
+#            'python BallMain.py ..path/Billard-Ball-Recognition/ImageExamples/01.png'
+
 import sys
 import numpy as np
 import cv2 as cv
