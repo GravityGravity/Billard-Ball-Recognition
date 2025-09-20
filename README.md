@@ -14,6 +14,11 @@ From there, Cannys Edge Detection method is ran with open operations to assist i
   - Red: Spot Ball
 
 Ball type labels are processed using kernels for color averaging at the points where circles have been spotted.  Any circles that have a mean **white** color value are labaled *spot balls* and all others are assumed to be Solid/Striped balls
+
+## Testing
+
+
+
 ### INPUT
    Expected Inputs:
    - Input Image Resolution: 1080x1920 or 1920x1080
@@ -35,3 +40,5 @@ This project when ran will output the following data:
 - Shown Image: Detected billard balls with unmodified given image
   
 ![output example](https://github.com/GravityGravity/Billard-Ball-Recognition/blob/main/ImageExamples/OutputExample.png)
+
+
