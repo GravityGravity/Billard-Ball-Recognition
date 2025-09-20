@@ -4,6 +4,12 @@
 #        Tables and spots Billard Balls along the top of the table using openCV
 #        image filtering, edge detection, and shape detection.
 
+# Expected Inputs:
+#   Input Image Resolution: 1080x1920 or 1920x1080
+#   Largest Area is Billard Ball Table
+#   Table color is mostly the same
+#   Good bright white lighting of table
+
 import sys
 import numpy as np
 import cv2 as cv
