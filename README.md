@@ -10,7 +10,7 @@ From there, Cannys Edge Detection method is ran with open operations to assist i
 ![edges + circles](https://github.com/GravityGravity/Billard-Ball-Recognition/blob/main/ImageExamples/EdgeExample.png)
 
 #### Identifiers
-  - Blue -> Solid and Striped balls
-  - Red -> Spot Ball
+  - Blue: Solid and Striped balls
+  - Red: Spot Ball
 
-Ball type labels are processed using color averaging at the points where circles have been spotted.  Any circles that have a mean **white** color value are 
+Ball type labels are processed using color averaging at the points where circles have been spotted.  Any circles that have a mean **white** color value are labaled *spot balls* and all others are assumed to be Solid/Striped balls
