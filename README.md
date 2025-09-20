@@ -1,6 +1,11 @@
 # Billard-Ball-Recognition
 This project takes in a variety of images containing Billards Tables and spots Billard Balls along the top of the table using openCV image filtering, edge detection, and shape detection.
 
+This implemented ball detection method was ran through 100 test images with the following detection rates:
+- Billard Ball Detection rate: 81.91% 
+- False Positive Rate: 25.42%
+- Correct Ball Classification rate: 88.49% 
+
 ![process](https://github.com/GravityGravity/Billard-Ball-Recognition/blob/main/ImageExamples/DetectedExample.png)
 
 ## Description
