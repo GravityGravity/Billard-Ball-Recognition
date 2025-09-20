@@ -11,4 +11,5 @@ From there, Cannys Edge Detection method is ran with open operations to assist i
 
 #### Identifiers
   Blue -> Solid and Striped balls
+  
   Red -> Spot Ball
