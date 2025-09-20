@@ -14,11 +14,24 @@ From there, Cannys Edge Detection method is ran with open operations to assist i
   - Red: Spot Ball
 
 Ball type labels are processed using kernels for color averaging at the points where circles have been spotted.  Any circles that have a mean **white** color value are labaled *spot balls* and all others are assumed to be Solid/Striped balls
+### INPUT
+   Expected Inputs:
+   - Input Image Resolution: 1080x1920 or 1920x1080
+   - Largest Area is Billard Ball Table
+   - Table color is mostly the same
+   - Good bright white lighting of table+
+#### *Example Input:*
+  > python BallMain.py ..path/Billard-Ball-Recognition/ImageExamples/02.png
+
+![orgimgexample](https://github.com/GravityGravity/Billard-Ball-Recognition/blob/main/ImageExamples/ImageFigure.png)
+
 
 ### OUTPUT
-This project when ran willout output the following data:
-- Image path passed:
+This project when ran will output the following data:
+- Image path passed
 - Number of potential billard balls detected
-- Coordinates of those billard balls
-- Detected Balls with Edges
-- Detected Balls with unmodified given image
+- Coordinates of potential billard balls + Spot Ball Identifier {X cord, Y cord, Spot-Ball?}
+- Shown Image: Detected billard balls with Edges
+- Shown Image: Detected billard balls with unmodified given image
+  
+![output example](https://github.com/GravityGravity/Billard-Ball-Recognition/blob/main/ImageExamples/OutputExample.png)
