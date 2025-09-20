@@ -15,7 +15,7 @@ From there, Cannys Edge Detection method is ran with open operations to assist i
 
 Ball type labels are processed using kernels for color averaging at the points where circles have been spotted.  Any circles that have a mean **white** color value are labaled *spot balls* and all others are assumed to be Solid/Striped balls
 
-###OUTPUT
+### OUTPUT
 This project when ran willout output the following data:
 - Image path passed:
 - Number of potential billard balls detected
