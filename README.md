@@ -8,3 +8,7 @@ Using OpenCV this project reads in a 1920x1080 or 1080x1920 sized image, crops t
 From there, Cannys Edge Detection method is ran with open operations to assist in the Hough Gradient Transform Detection.  Using these two methods provides the following results on our example image.
 
 ![edges + circles](https://github.com/GravityGravity/Billard-Ball-Recognition/blob/main/ImageExamples/EdgeExample.png)
+
+##### Identifiers
+  Blue -> Solid and Striped balls
+  Red -> Spot Ball
