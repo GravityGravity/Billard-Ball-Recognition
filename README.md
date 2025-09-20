@@ -20,6 +20,8 @@ Ball type labels are processed using kernels for color averaging at the points w
    - Largest Area is Billard Ball Table
    - Table color is mostly the same
    - Good bright white lighting of table+
+#### *Example Input:*
+  > python BallMain.py ..path/Billard-Ball-Recognition/ImageExamples/01.png
 
 
 ### OUTPUT
