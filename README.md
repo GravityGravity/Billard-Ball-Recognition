@@ -20,7 +20,7 @@ This project when ran will output the following data:
 - Image path passed
 - Number of potential billard balls detected
 - Coordinates of potential billard balls + Spot Ball Identifier {X cord, Y cord, Spot-Ball?}
-- Detected billard balls with Edges
-- Detected billard balls with unmodified given image
+- Shown Image: Detected billard balls with Edges
+- Shown Image: Detected billard balls with unmodified given image
   
 ![output example](https://github.com/GravityGravity/Billard-Ball-Recognition/blob/main/ImageExamples/OutputExample.png)
